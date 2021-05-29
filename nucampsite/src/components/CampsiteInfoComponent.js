@@ -1,13 +1,18 @@
 import React from "react";
-import {
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  Breadcrumb,
-  BreadcrumbItem,
-} from "reactstrap";
+import { Card, CardImg, CardText, CardBody, Breadcrumb, BreadcrumbItem,  Button, } from "reactstrap";
 import { Link } from "react-router-dom";
+import { Control, LocalForm, Errors } from "react-redux-form";
+
+class CommentForm extends React.Component {
+  render() {
+    return (
+              <Button outline>
+          {" "}
+          <i className="fa fa-pencil fa-lg" />Submit Comment{" "}
+        </Button>
+          );
+  }
+}
 
 function RenderCampsite({ campsite }) {
   return (
@@ -43,6 +48,7 @@ function RenderComments({ comments }) {
             </div>
           );
         })}
+        <CommentForm />
       </div>
     );
   }
